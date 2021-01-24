@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+</head>
+<style>
+  .box{
+     width:100px;
+    height:100px;
+    border:1px solid black;
+  }
+  .cssstyle{
+    background:yellow;
+    transform:rotate(45deg);
+   
+  }
+</style>
+<body>
+    <div id="app">
+     <!---   <section>
+            <div class="container">
+          
+              <div class="title">
+              {{title}}
+                 <img class="logo" 
+                 :src="src"> 
+              </div>
+              <div class="number">{{ index+1 }}
+                <a href="#"  @click="changeIndex(-1)">-1</a>
+                <a href="#" @click="changeIndex(1)">+1</a>
+              </div>
+              <div class="type">{{ menu[index].type }}</div>
+              <div class="course">{{ menu[index].title }}</div>
+            </div>
+            
+        </section>--->
+        {{mess}}
+       <div class="box" :class="{'cssstyle':isRotate}"></div>
+        
+        <button @click="isRotate=!isRotate">rotate it!</button>
+    </div>
+   
+</body>
+<script>
+  //  let data ={
+   //     src:'https://images.unsplash.com/photo-1607500321257-c80439b426f0?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1189&q=80',
+  //    title:'Vue JS Pratice',
+  //      index:0,
+  //      menu:[
+  //      {type:'類型',title:'菜名',link:''},
+  //      {type:'類型2',title:'菜名22',link:''},
+  //      {type:'類型3',title:'菜名22',link:''},
+  //      {type:'類型4',title:'菜名22',link:''},
+  //      ],
+  //  }
+
+var app = new Vue({
+ el:'#app',
+ //data:data,
+ data:{
+  mess:'Hello World',
+  isRotate:false,
+   
+ },
+ methods:{
+ // changeIndex(change){
+   //   this.index+=change;
+   //   console.log(menu.length);
+ // },
+
+
+ }
+
+})
+
+
+
+</script>
+</html>
